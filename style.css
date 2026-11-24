@@ -2,4 +2,5 @@
 body { font-family: Arial, sans-serif; margin: 0; text-align: center; } 
 header { background: darkgreen; color: white; padding: 30px; } 
 section { padding: 50px; } 
-footer { background: #333; color: white; padding: 15px; } 
+footer { background: #333; color: white; padding: 15px; }
+.promotion { background: #fff3cd; color: #333; margin: 20px; border-radius: 8px; } 
