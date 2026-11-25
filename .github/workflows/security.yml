@@ -18,9 +18,7 @@ jobs:
           docker compose config -q 
       - name: Verifier le port local 
         run: | 
-          docker compose config --format json | python -c 'import json,sys; 
-p=json.load(sys.stdin)["services"]["web"]["ports"]; sys.exit(0 if p and 
-all(x.get("host_ip")=="127.0.0.1" for x in p) else 1)' 
+          docker compose config --format json | python -c 'import json,sys; p=json.load(sys.stdin)["services"]["web"]["ports"]; sys.exit(0 if p and all(x.get("host_ip")=="127.0.0.1" for x in p) else 1)' 
       - name: Construire image 
         run: docker build -t afrishop:ci . 
       - name: Scanner image avec Trivy 
